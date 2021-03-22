@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity2">
 
     <Button
@@ -11,7 +12,6 @@
         android:layout_width="0dp"
         android:layout_height="58dp"
         android:layout_marginTop="501dp"
-        android:layout_marginEnd="16dp"
         android:onClick="Reply"
         android:text="@string/reply"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,7 +24,7 @@
         android:layout_height="43dp"
         android:layout_marginTop="500dp"
         android:background="@color/white"
-        android:ems="10"
+        android:textColor="@color/black"
         android:hint="@string/hint"
         android:inputType="textPersonName"
         android:textAlignment="center"
@@ -43,6 +43,7 @@
         android:layout_marginBottom="450dp"
         android:text="@string/recieved"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:gravity="center"
         android:textStyle="bold|italic"
         android:background="@color/green"
@@ -59,6 +60,7 @@
         android:layout_marginTop="40dp"
         android:gravity="center"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="15dp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"

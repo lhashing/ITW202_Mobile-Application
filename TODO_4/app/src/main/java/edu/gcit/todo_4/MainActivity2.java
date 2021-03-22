@@ -14,14 +14,12 @@ public class MainActivity2 extends AppCompatActivity {
 
     private TextView textFromSend;
     private EditText ReplyEditText;
-//    private TextView RepliedHeader;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         textFromSend = findViewById(R.id.textRecieved);
         ReplyEditText = findViewById(R.id.editText_send3);
-//        RepliedHeader = findViewById(R.id.ReplyHeader);
 
         Intent obj = getIntent();
         String msg = obj.getStringExtra(MainActivity.EXTRA_MESSAGE);
@@ -30,10 +28,10 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void Reply(View view) {
         Intent returnIntent = new Intent(this, MainActivity.class);
-        String reply = ReplyEditText.getText().toString();
-        returnIntent.putExtra(EXTRA_REPLY, reply);
-//        RepliedHeader.setVisibility(view.VISIBLE);
-        startActivity(returnIntent);
+        String replymsg = ReplyEditText.getText().toString();
+        returnIntent.putExtra(EXTRA_REPLY, replymsg);
+        setResult(RESULT_OK, returnIntent);
+        finish();
     }
 
 

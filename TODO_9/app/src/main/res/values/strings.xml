@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TODO_9</string>
+    <string name="enter_a_number">Enter A Number</string>
+    <string name="add">ADD</string>
+    <string name="sub">SUB</string>
+    <string name="computationError">Error</string>
+</resources>

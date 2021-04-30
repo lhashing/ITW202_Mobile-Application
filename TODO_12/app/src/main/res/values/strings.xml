@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TODO_12</string>
+    <string name="droid_desserts">Droid Desserts</string>
+    <string name="donut_des">Donuts are glazed and sprinkled with candy.</string>
+    <string name="icecream_des">Ice cream sandwiches have chocolate wafers and vanilla filling.</string>
+    <string name="froyo_des">FroYo is premium self-serve frozen yogurt.</string>
+
+    <string name="donut_order_message">You ordered a donut.</string>
+    <string name="ice_cream_order_message">You ordered an ice cream sandwich.</string>
+    <string name="froyo_order_message">You ordered a FroYo.</string>
+    <string name="order">Order</string>
+</resources>

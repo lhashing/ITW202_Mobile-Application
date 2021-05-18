@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="SportsTitle"
+        parent="TextAppearance.AppCompat.Display1" />
+    <style name="SportsDetailText"
+        parent="TextAppearance.AppCompat.Headline" />
+</resources>

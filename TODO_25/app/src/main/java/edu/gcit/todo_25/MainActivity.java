@@ -30,25 +30,19 @@ public class MainActivity extends AppCompatActivity {
         viewAll = findViewById(R.id.viewAll);
         update = findViewById(R.id.update);
         delete = findViewById(R.id.delete);
-        AddData();
     }
 
-    public void AddData() {
-        addData.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                boolean isInserted = myDb.insertData(id.getText().toString(),
-                        Fname.getText().toString(),
-                        Lname.getText().toString(),
-                        Marks.getText().toString());
+    public void AddData(View view) {
+        boolean isInserted = myDb.insertData(id.getText().toString(),
+                Fname.getText().toString(),
+                Lname.getText().toString(),
+                Marks.getText().toString());
 
-                if(isInserted == true) {
-                    Toast.makeText(MainActivity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(MainActivity.this, "Data Not Inserted", Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
+        if(isInserted == true) {
+            Toast.makeText(MainActivity.this, "Data Inserted", Toast.LENGTH_SHORT).show();
+        }
+        else {
+            Toast.makeText(MainActivity.this, "Data Not Inserted", Toast.LENGTH_SHORT).show();
+        }
     }
 }

@@ -2,6 +2,7 @@ package edu.gcit.todo_25;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -21,7 +22,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE " + TABLE_NAME + "(ID INTEGER PRIMARY KEY, FIRSTNAME TEXT, LASTNAME TEXT, MARKS INTEGER)");
+        db.execSQL("CREATE TABLE " + TABLE_NAME + " (ID INTEGER PRIMARY KEY," +
+                "FIRSTNAME TEXT, LASTNAME TEXT, MARKS INTEGER)");
     }
 
     @Override
@@ -44,5 +46,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else {
             return true;
         }
+    }
+
+    public Cursor getAllData() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME, null);
+
+        return res;
+    }
+
+    public boolean updateData(String id, String fname, String lname, String marks) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_1, id);
+        contentValues.put(COL_2, fname);
+        contentValues.put(COL_3, lname);
+        contentValues.put(COL_4, marks);
+        long result = db.update(TABLE_NAME, contentValues, "ID = ?", new String[] {id});
+
+        if (result != 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public Integer deleteData (String id) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        return db.delete(TABLE_NAME, "ID = ?", new String[] {id});
     }
 }

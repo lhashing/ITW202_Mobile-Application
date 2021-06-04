@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "419315932080",
+    "firebase_url": "https://tshogyen-vote-default-rtdb.firebaseio.com",
+    "project_id": "tshogyen-vote",
+    "storage_bucket": "tshogyen-vote.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:419315932080:android:6243513a1fe813eb7bd475",
+        "android_client_info": {
+          "package_name": "edu.gcit.tshogyen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "419315932080-lmc54av85p2imgnfku4h98s1aalavj0e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfSxGl7OBj0MPnG0cgt4O8aZMD1lA0qog"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "419315932080-lmc54av85p2imgnfku4h98s1aalavj0e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

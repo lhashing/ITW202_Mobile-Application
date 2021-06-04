@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterCandidatesActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="0dp"
+            android:layout_height="106dp"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginRight="120dp"
+            android:onClick="ChooseImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.428"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_register"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/user_register"
+            style="@style/title"
+            android:layout_marginTop="24dp"
+            android:text="@string/register_candidates"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <EditText
+            android:id="@+id/user_id"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/edit_text"
+            android:drawableLeft="@drawable/id"
+            android:drawablePadding="10dp"
+            android:hint="Enter Candidate ID"
+            android:inputType="number|textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButton"
+            style="@style/editText"/>
+<!--        android:layout_marginLeft="60dp"-->
+<!--        android:layout_marginRight="60dp"-->
+
+        <EditText
+            android:id="@+id/user_fullname"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="60dp"
+            android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+            android:background="@drawable/edit_text"
+            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:hint="Enter Full Name"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_id"
+            style="@style/editText"/>
+
+        <EditText
+            android:id="@+id/user_email"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="60dp"
+            android:background="@drawable/edit_text"
+            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:hint="Enter Candidate Email"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_fullname"
+            style="@style/editText"/>
+
+        <!--    <Spinner-->
+        <!--        android:id="@+id/spinner"-->
+        <!--        android:layout_width="200dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginEnd="10dp"-->
+        <!--        android:layout_marginRight="10dp"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.0"-->
+        <!--        app:layout_constraintStart_toEndOf="@+id/roleSpinner"-->
+        <!--        app:layout_constraintTop_toTopOf="@+id/roleSpinner" />-->
+
+        <!--    <TextView-->
+        <!--        android:id="@+id/roleSpinner"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="wrap_content"-->
+        <!--        android:layout_marginStart="65dp"-->
+        <!--        android:layout_marginLeft="65dp"-->
+        <!--        android:layout_marginTop="24dp"-->
+        <!--        android:text="Candidate Role :"-->
+        <!--        android:textColor="@color/black"-->
+        <!--        android:textSize="16sp"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/user_email" />-->
+
+            <EditText
+                android:id="@+id/candidate_role"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="60dp"
+                android:digits=" ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:hint="Enter Candidate Role"
+                android:inputType="text"
+                android:background="@drawable/edit_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.568"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_email"
+                style="@style/editText"/>
+
+<!--        <AutoCompleteTextView-->
+<!--            android:id="@+id/candidate_role"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            android:layout_marginStart="60dp"-->
+<!--            android:layout_marginLeft="60dp"-->
+<!--            android:layout_marginTop="24dp"-->
+<!--            android:layout_marginEnd="60dp"-->
+<!--            android:layout_marginRight="60dp"-->
+<!--            android:background="@drawable/edit_text"-->
+<!--            android:completionThreshold="1"-->
+<!--            android:drawableLeft="@drawable/ic_baseline_person_24"-->
+<!--            android:drawablePadding="10dp"-->
+<!--            android:ems="13"-->
+<!--            android:hint="Enter Candidate Role"-->
+<!--            android:inputType="text"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.568"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/user_email" />-->
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="125dp"
+            android:background="@drawable/yellowbtn"
+            android:text="@string/register"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/candidate_role"
+            style="@style/button"/>
+
+        <Button
+            android:id="@+id/show_list"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="125dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="125dp"
+            android:background="@drawable/yellowbtn"
+            android:text="View List"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.512"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_btn"
+            style="@style/button"/>
+
+        <ProgressBar
+            android:id="@+id/progress_Bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/register_btn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

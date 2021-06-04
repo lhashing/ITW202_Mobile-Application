@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button
+            android:id="@+id/CCvote"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:onClick="registerCandidates"
+            android:text="@string/register_candidates"
+            style="@style/mainpage_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/verifyTextUser"
+            android:background="@drawable/yellowbtn"/>
+
+        <!--    <Button-->
+        <!--        android:id="@+id/vote"-->
+        <!--        android:layout_width="0dp"-->
+        <!--        android:layout_height="70dp"-->
+        <!--        android:layout_marginStart="70dp"-->
+        <!--        android:layout_marginLeft="70dp"-->
+        <!--        android:layout_marginTop="32dp"-->
+        <!--        android:layout_marginEnd="70dp"-->
+        <!--        android:onClick="updateCandidates"-->
+        <!--        android:layout_marginRight="70dp"-->
+        <!--        android:text="@string/update_candidates"-->
+        <!--        app:layout_constraintEnd_toEndOf="parent"-->
+        <!--        app:layout_constraintHorizontal_bias="0.0"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/candidates" />-->
+
+        <Button
+            android:id="@+id/viewCandidates"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="70dp"
+            android:onClick="viewCandidates"
+            android:text="View Candidates"
+            style="@style/mainpage_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CCvote"
+            android:background="@drawable/yellowbtn"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/logout"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_marginStart="70dp"-->
+<!--            android:layout_marginLeft="70dp"-->
+<!--            android:layout_marginTop="134dp"-->
+<!--            android:layout_marginEnd="70dp"-->
+<!--            android:layout_marginRight="70dp"-->
+<!--            android:onClick="logout"-->
+<!--            android:text="@string/logout"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.0"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/viewCandidates"-->
+<!--            android:background="@drawable/yellowbtn"/>-->
+
+        <TextView
+            android:id="@+id/verifyTextUser"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/please_click_here_to_verify_email"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

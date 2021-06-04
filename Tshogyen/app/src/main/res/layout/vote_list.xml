@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="20dp"
+    android:scrollbars="vertical"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true"
+    android:background="?android:selectableItemBackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/image_voteView"
+            android:layout_width="145dp"
+            android:layout_height="117dp"
+            android:layout_gravity="left"
+            android:src="@drawable/profile_pic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.583" />
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_below="@+id/image_voteView"
+            android:layout_marginTop="0dp"
+            android:text="Candidate Name"
+            style="@style/cardText" />
+
+        <TextView
+            android:id="@+id/t4"
+            android:layout_below="@+id/t1"
+            android:text="Candidate Role"
+            style="@style/cardText" />
+
+        <Button
+            android:id="@+id/voteButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="62dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_toEndOf="@+id/image_voteView"
+            android:layout_toRightOf="@+id/image_voteView"
+            android:onClick="voteCandidate"
+            android:text="Vote"
+            style="@style/button"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
